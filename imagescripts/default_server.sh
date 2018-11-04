@@ -35,6 +35,7 @@ cat >> ${NGINX_DIRECTORY}/nginx.conf <<_EOF_
   include ${NGINX_DIRECTORY}/default.d/*.conf;
 
   location / {
+    include ${NGINX_DIRECTORY}/custom/ipfilter*.conf;
   }
 
   error_page 404 /404.html;
